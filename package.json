@@ -1,17 +1,11 @@
 {
-  "name": "socket.io-serialport",
+  "name": "@bulletlogic/socket.io-serialport",
   "version": "2.0.1",
   "description": "Expose a serial port over a socket.io instance",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pghalliday/socket.io-serialport.git"
+    "url": "git+https://github.com/bulletlogic/socket.io-serialport.git"
   },
   "keywords": [
     "websocket",
@@ -21,15 +15,17 @@
   "author": "Peter Halliday <pghalliday@gmail.com> (http://pghalliday.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pghalliday/socket.io-serialport/issues"
+    "url": "https://github.com/bulletlogic/socket.io-serialport/issues"
   },
-  "homepage": "https://github.com/pghalliday/socket.io-serialport#readme",
+  "homepage": "https://github.com/bulletlogic/socket.io-serialport#readme",
   "dependencies": {
-    "mkdirp": "^0.5.1",
-    "serialport": "^4.0.3",
+    "mkdirp": "^1.0.4",
     "socket.io-stream": "^0.9.1"
   },
+  "peerDependencies": {
+    "serialport": "9.x"
+  },
   "devDependencies": {
-    "socket.io": "^1.5.0"
+    "socket.io": "^4.1.3"
   }
 }
