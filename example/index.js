@@ -1,14 +1,13 @@
 'use strict';
 
-const Server = require('socket.io');
 const SerialPort = require('../');
 const path = require('path');
 
 const device = process.argv[2];
-const baudrate = process.argv[3];
+const baudRate = parseInt(process.argv[3], 10);
 const captureFile = path.resolve(__dirname, 'capture.log');
 
-const io = new Server(8080);
+const io = require('socket.io')(8080);
 
 const serialPort = new SerialPort({
   io: io,
@@ -17,7 +16,7 @@ const serialPort = new SerialPort({
   retryPeriod: 1000,
   captureFile: captureFile,
   options: {
-    baudrate: parseInt(baudrate)
+    baudRate
   }
 });
 
